@@ -7,5 +7,9 @@ CORE-JAVA-DEV-Feburary - 2026
 -> JSTL 
 -> HIBERNATE 
 
+-> JPA 
+
+-> REST-API & WEB-SERVICES
+
 
 
