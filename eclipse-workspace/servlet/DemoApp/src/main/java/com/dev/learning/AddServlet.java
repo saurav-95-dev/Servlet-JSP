@@ -19,12 +19,14 @@ public class AddServlet extends HttpServlet {
 //		RequestDispatcher rd = req.getRequestDispatcher("sq");
 //		rd.forward(req, res);
 		
-		HttpSession session  = req.getSession();
-		session.setAttribute("result", result);
-		res.sendRedirect("sq?result="+result);
+//		HttpSession session  = req.getSession();
+//		session.setAttribute("result", result);
 		
-		
-		
+        Cookie cookie = new Cookie("result" , result+"");
+        res.addCookie(cookie);
+        res.sendRedirect("sq");
+        
+        
 	}
 
 }
