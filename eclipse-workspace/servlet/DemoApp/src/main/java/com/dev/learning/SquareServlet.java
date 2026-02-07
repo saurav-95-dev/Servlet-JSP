@@ -5,14 +5,18 @@ import java.io.IOException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class SquareServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req , HttpServletResponse res ) throws IOException {
-    	res.getWriter().println("hii there , this is square servlet");
+		
+    	//res.getWriter().println("hii there , this is square servlet");
     	
     	//int k  = (int)req.getAttribute("result");
-    	int k = Integer.parseInt(req.getParameter("result"));
-    	int ans = k*k;
+    	//int k = Integer.parseInt(req.getParameter("result"));
+		HttpSession session = req.getSession();
+		int k = (int)session.getAttribute("result");
+		int ans = k*k;
     	res.getWriter().println("Square of the 2 numbers is:" + ans);
 		System.out.println("sq called");
 		
