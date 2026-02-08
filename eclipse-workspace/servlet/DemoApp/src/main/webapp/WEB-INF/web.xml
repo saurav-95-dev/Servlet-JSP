@@ -39,6 +39,14 @@
 	<servlet>
     <servlet-name>my</servlet-name>
     <servlet-class>com.dev.learning.MyServlet</servlet-class>
+    <init-param>
+    <param-name>
+    name
+    </param-name>
+    <param-value>
+    laukik
+    </param-value>
+    </init-param>
 </servlet>
 
 <servlet-mapping>
@@ -57,5 +65,7 @@
 	<param-name>Phone</param-name>
 	<param-value>Motorola</param-value>
 	</context-param>
+	<!-- ................................. -->
+	
 	
 </web-app>

@@ -1,6 +1,8 @@
 package com.dev.learning;
 
 import java.io.IOException;
+
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,10 +15,13 @@ public class MyServlet extends HttpServlet {
 
         res.getWriter().println("Hi");
 
-        ServletContext context = req.getServletContext();
+        //ServletContext context = req.getServletContext();
+        ServletConfig cg = getServletConfig();
+        
+        
 
-        String name = context.getInitParameter("name");
-        String phone = context.getInitParameter("Phone");
+        String name = cg.getInitParameter("name");
+        String phone = cg.getInitParameter("Phone");
 
         res.getWriter().println("Name: " + name);
         res.getWriter().println("Phone: " + phone);
