@@ -12,3 +12,6 @@
 //→CONTROLLER only only for accepting request and sending response , so we dont perform actual processing inside controller . 
 //→To perform data processing , this CONTROLLER will another class called Service Class.
 //→Inside this Service Class , we can write JDBC steps to connect it to DB via DAO Layer/classes.
+
+//PROCESS FLOW : 
+//Client → Request → CONTROLLER → calls → SERVICE-CLASS (saying "Hey Service class , give me the MODEL object with data so that I can send it to the VIEW LAYER" → SERVICE CLASS (for data processing) → connect with → JDBC WITH RDBMS → DAO LAYER/CLASSES → after getting the data in the format of MODEL OBJECT aka (POJO-Plain old java object)) → CONTROLLER →sends →MODEL OBJECT →VIEW LAYER/DESIGN LAYER → sent to →CLIENT
