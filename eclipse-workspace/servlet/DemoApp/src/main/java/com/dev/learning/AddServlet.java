@@ -4,8 +4,10 @@ import java.io.IOException;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
+@WebServlet("/add")
 public class AddServlet extends HttpServlet {
 	
 	public void doGet(HttpServletRequest req , HttpServletResponse res ) throws IOException, ServletException {
@@ -14,13 +16,6 @@ public class AddServlet extends HttpServlet {
 		int j = Integer.parseInt(req.getParameter("num2"));
 		int result = i+j;
 		
-//		req.setAttribute("result", result);
-		
-//		RequestDispatcher rd = req.getRequestDispatcher("sq");
-//		rd.forward(req, res);
-		
-//		HttpSession session  = req.getSession();
-//		session.setAttribute("result", result);
 		
         Cookie cookie = new Cookie("result" , result+"");
         res.addCookie(cookie);
