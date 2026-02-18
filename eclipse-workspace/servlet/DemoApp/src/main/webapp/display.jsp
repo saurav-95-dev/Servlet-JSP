@@ -10,11 +10,9 @@
 </head>
 <body>
 
-   <%
-     String name = request.getAttribute("label").toString();
-     out.println(name);
-   
-   %>
+   ${label }
 
 </body>
 </html>
+
+
