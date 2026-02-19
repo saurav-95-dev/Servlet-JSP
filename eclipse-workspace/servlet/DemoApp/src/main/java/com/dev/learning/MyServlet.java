@@ -14,6 +14,8 @@ import jakarta.servlet.http.HttpServletResponse;
 public class MyServlet extends HttpServlet{
 	public void doGet(HttpServletRequest request , HttpServletResponse response) throws IOException {
 		PrintWriter out = response.getWriter();
-		out.println("Welcome");
+		String aname = request.getParameter("aname");
+		int aid = Integer.parseInt(request.getParameter("aid"));
+		out.println("Welcome " + aname);
 	}
 }
