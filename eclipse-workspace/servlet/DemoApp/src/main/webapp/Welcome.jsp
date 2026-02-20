@@ -12,6 +12,6 @@
     	 response.sendRedirect("login.jsp");
      }
    %>
-   Welcome 
+      Welcome ${username}
 </body>
 </html>
