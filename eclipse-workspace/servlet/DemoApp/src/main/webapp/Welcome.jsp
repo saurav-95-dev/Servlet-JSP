@@ -12,6 +12,8 @@
     	 response.sendRedirect("login.jsp");
      }
    %>
-      Welcome ${username}
+      Welcome ${username} <br>
+      
+      <a href="videos.jsp">Click to view videos</a>
 </body>
 </html>

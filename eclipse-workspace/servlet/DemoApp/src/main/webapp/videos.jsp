@@ -8,5 +8,7 @@
 </head>
 <body>
 
+   Videos page
+
 </body>
 </html>
