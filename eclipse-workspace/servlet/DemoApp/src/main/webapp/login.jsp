@@ -7,10 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <form action="login">
+  <form action="Login">
   
   Enter username : <input type="text" name="uname"><br>
-  Enter Password : <input type="text" name="pass">
+  Enter Password : <input type="password" name="pass">
+  
   <input type="submit" value="login">
   
   </form>
