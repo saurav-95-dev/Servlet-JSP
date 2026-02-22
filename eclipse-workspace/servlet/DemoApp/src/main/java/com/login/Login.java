@@ -37,3 +37,17 @@ class DBConnectionFactory {
         throw new IllegalArgumentException("Invalid DB Type");
     }
 }
+
+public class JdbcFactoryDemo {
+
+    public static void main(String[] args) {
+
+        String db = "MYSQL"; // comes from config file usually
+
+        DBConnection connection =
+                DBConnectionFactory.getConnection(db);
+
+        connection.connect();
+    }
+}
+
