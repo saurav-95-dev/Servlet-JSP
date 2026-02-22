@@ -1,7 +1,10 @@
+//Product Interface
+
 interface DBConnection {
     void connect();
 }
 
+//Concrete Implementation
 class MySQLConnection implements DBConnection {
     public void connect() {
         System.out.println("Connected to MySQL Database");
