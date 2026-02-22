@@ -14,3 +14,9 @@ class OracleConnection implements DBConnection {
         System.out.println("Connected to Oracle Database");
     }
 }
+
+class PostgreSQLConnection implements DBConnection {
+    public void connect() {
+        System.out.println("Connected to PostgreSQL Database");
+    }
+}
