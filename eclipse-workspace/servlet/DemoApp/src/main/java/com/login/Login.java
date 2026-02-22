@@ -20,3 +20,20 @@ class PostgreSQLConnection implements DBConnection {
         System.out.println("Connected to PostgreSQL Database");
     }
 }
+
+class DBConnectionFactory {
+
+    public static DBConnection getConnection(String dbType) {
+
+        if (dbType.equalsIgnoreCase("MYSQL"))
+            return new MySQLConnection();
+
+        else if (dbType.equalsIgnoreCase("ORACLE"))
+            return new OracleConnection();
+
+        else if (dbType.equalsIgnoreCase("POSTGRES"))
+            return new PostgreSQLConnection();
+
+        throw new IllegalArgumentException("Invalid DB Type");
+    }
+}
