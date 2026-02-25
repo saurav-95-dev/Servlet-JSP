@@ -15,6 +15,11 @@
     }
   %>
    This is video page
+   <br>
+   <br>
+   <form action="Logout">
+      <input type="submit" value="Logout">
+  </form>
   
   
 </body>
