@@ -19,7 +19,7 @@
   
   <a href = "videos.jsp">Click here to see videos</a>
   
-  <form action="Logout">
+  <form action="Logout" method="Post">
       <input type="submit" value="Logout">
   </form>
   
