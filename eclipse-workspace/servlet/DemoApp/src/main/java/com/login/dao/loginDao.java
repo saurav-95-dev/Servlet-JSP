@@ -21,7 +21,9 @@ public class LoginDao {
             st.setString(2, pass);
 
             ResultSet rs = st.executeQuery();
-            return rs.next(); // cleaner
+            if(rs.next()) {
+            	return true;
+            }
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
